@@ -32,13 +32,13 @@ A simple web-based mini game built with **p5.js** for the frontend and **Flask +
 
 ## Data Being Taken Out From Database (name, score, date&time)
 
-- ![Data Sent To Database with GET Method](highscoresfromdb.png)
+- ![Data Taken Out of Database with GET Method](highscoresfromdb.png)
 
 
 ## Flask Routes Being Tested With Postman API
 
 - ![Data Sent To Database with GET Method](postmantest.png)
-- ![Data Sent To Database with GET Method](postmantest2.png)
+- ![Data Sent To Database with POST Method](postmantest2.png)
   
 
 
