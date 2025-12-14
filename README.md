@@ -38,5 +38,7 @@ A simple web-based mini game built with **p5.js** for the frontend and **Flask +
 ## Flask Routes Being Tested With Postman API
 
 - ![Data Sent To Database with GET Method](postmantest.png)
+- ![Data Sent To Database with GET Method](postmantest2.png)
+  
 
 
