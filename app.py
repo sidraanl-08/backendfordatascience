@@ -35,7 +35,7 @@ def score():
 
     cursor = con.cursor()
     cursor.execute(
-        'INSERT INTO scores(name, score, created_at) VALUES (%s,%s, %s)',
+        'INSERT INTO scores(name, score, created_at) VALUES (%s,%s, %s)', #%s should be according to number fo columns
         (name, score_value, created_at)
     )
 
@@ -43,7 +43,7 @@ def score():
 
 
     cursor.close()
-    con.close()
+    con.close() #each route has its own connection that must be closed
 
     return jsonify({'message': "score sent to database! :)"}), 200
 
@@ -59,7 +59,7 @@ def get_highscores():
         database = 'game'
     )
 
-    cursor = con.cursor(dictionary=True)
+    cursor = con.cursor(dictionary=True) #we use python object dictionary to visualize data from database through json
     cursor.execute(
         'SELECT name, score, created_at FROM scores ORDER BY score DESC LIMIT 5'
     )
