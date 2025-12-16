@@ -31,7 +31,7 @@ def create_user():
     return jsonify({"message" : "user created :)"}), 201
 
 
-#read all users
+#read one user with fetchone
 
 @app.route('/user/<int:id>', methods=['GET'])
 def get_user(id):
@@ -61,6 +61,14 @@ def delete_user(id):
     db.commit()
     return jsonify ({'message': "user deleted :("})
 
+
+#read all users with fetchall
+
+@app.route('/users', methods=['GET'])
+def get_users():
+    cursor.execute('SELECT * FROM users')
+    users = cursor.fetchall()
+    return jsonify(users)
 
 
 
